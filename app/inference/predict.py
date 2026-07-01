@@ -23,7 +23,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 MODEL_PATH = PROJECT_ROOT / "models" / "best_model.keras"
 CLASS_PATH = PROJECT_ROOT / "models" / "class_names.pkl"
 
-model = load_model(MODEL_PATH)
+class SafeVarianceScaling(keras.initializers.VarianceScaling):
+    def __init__(self, scale=1.0, mode="fan_in", distribution="truncated_normal", seed=None, **kwargs):
+        super().__init__(scale=scale, mode=mode, distribution=distribution, seed=seed)
+
+model = load_model(MODEL_PATH, custom_objects={'VarianceScaling': SafeVarianceScaling}, compile=False)
 
 with open(CLASS_PATH, "rb") as file:
     CLASS_NAMES = pickle.load(file)
