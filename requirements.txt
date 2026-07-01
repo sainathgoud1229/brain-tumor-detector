@@ -3,7 +3,7 @@ uvicorn==0.35.0
 
 streamlit==1.46.1
 
-tensorflow==2.19.0
+tensorflow-cpu==2.19.0
 keras==3.10.0
 
 numpy==2.1.3
