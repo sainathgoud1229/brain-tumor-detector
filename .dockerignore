@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.env
+
+# Git
+.git/
+.gitignore
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/
+
+# Testing
+.pytest_cache/
+tests/
+
+# Logs
+logs/
+
+# Temporary files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Streamlit cache
+.streamlit/cache/
+
+# Reports (generated PDFs)
+reports/
+
+# Uploads (runtime generated)
+uploads/
+
+# Images used for testing
+test_images/
