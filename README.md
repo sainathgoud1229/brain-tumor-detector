@@ -1,4 +1,6 @@
-    ![Brain Tumor Detection AI Dashboard](docs/screenshots/sct.png)
+<p align="center">
+  <img src="docs/screenshots/sct.png" alt="Brain Tumor Detection AI Dashboard" width="100%" />
+</p>
 
 ---
 
@@ -236,7 +238,7 @@ PDF Report
 ## Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/brain-tumor-detector.git
+git clone https://github.com/sainathgoud1229/brain-tumor-detector.git
 cd brain-tumor-detector
 ```
 
