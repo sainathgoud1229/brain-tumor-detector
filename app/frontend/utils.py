@@ -3,7 +3,7 @@ import requests
 import streamlit as st
 from PIL import Image
 import io
-API_URL = "https://brain-tumor-detector-<url>.railway.app/predict"
+API_URL = os.environ.get("API_URL", "http://127.0.0.1:8000/predict")
 
 def call_prediction_api(image_file):
     """
