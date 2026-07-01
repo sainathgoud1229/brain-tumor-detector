@@ -23,13 +23,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 MODEL_PATH = PROJECT_ROOT / "models" / "best_model.keras"
 CLASS_PATH = PROJECT_ROOT / "models" / "class_names.pkl"
 
-# Monkey-patch VarianceScaling to ignore Keras 3 version mismatch kwargs
-import keras
-original_init = keras.initializers.VarianceScaling.__init__
-def safe_init(self, scale=1.0, mode="fan_in", distribution="truncated_normal", seed=None, **kwargs):
-    original_init(self, scale=scale, mode=mode, distribution=distribution, seed=seed)
-keras.initializers.VarianceScaling.__init__ = safe_init
-
 model = load_model(MODEL_PATH, compile=False)
 
 with open(CLASS_PATH, "rb") as file:
