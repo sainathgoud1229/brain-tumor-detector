@@ -238,7 +238,7 @@ PDF Report
 ## Clone Repository
 
 ```bash
-git clone https://github.com/sainathgoud1229/brain-tumor-detector.git
+git clone https://github.com/<user name .brain-tumor-detector.git
 cd brain-tumor-detector
 ```
 
@@ -320,7 +320,7 @@ docker run -p 8501:8501 brain-tumor-detector
 
 # 📷 Application Screenshots
 
-> Screenshots will be added after capturing the final application.
+all these images in website.....
 
 * Dashboard
 * MRI Upload
